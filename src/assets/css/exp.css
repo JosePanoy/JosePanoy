@@ -1,0 +1,143 @@
+h1{
+    color: hsl(0, 0%, 94%);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+    cursor: default;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+  }
+  
+  .skill-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .skill-line h3 {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+  
+  .progress-container {
+    width: 350px;
+    height: 20px;
+    background: linear-gradient(to right, #f0f0f0, #c2c2c2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #00b894, #00cec9);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .progress-text {
+    padding-right: 3px;
+    color: hsl(0, 0%, 87%);
+    font-weight: bold;
+  }
+  
+  .experience-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 90%;
+    max-width: 900px; 
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    color: #ededed;
+    cursor: default;
+    font-weight: 500;
+    margin-bottom: 190px;
+  }
+  
+  .container h2 {
+    color: hsl(0, 0%, 94%);
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: -10px;
+    cursor: default;
+    margin-top: 60px;
+  }
+  
+  .column-left,
+  .column-right {
+    flex: 0 0 100%; 
+    margin-bottom: 20px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .column-left,
+    .column-right {
+      flex: 0 0 calc(50% - 5px); 
+      margin-bottom: 0; 
+    }
+  }
+  
+/* exp.css */
+.vertical-timeline-element--education .vertical-timeline-element-icon {
+    background: hsl(179, 100%, 40%);
+    color: #fff;
+    width: 5px; 
+    height: 5px; 
+    left: calc(50% - 8px); 
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  
+  .vertical-timeline-element--education:nth-child(even) .vertical-timeline-element-icon {
+    background: hsl(179, 100%, 40%);
+  }
+  
+  .vertical-timeline-element--education .vertical-timeline-element-date {
+    color: hsl(179, 100%, 40%);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: default;
+  }
+  
+  .vertical-timeline-element--education {
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .vertical-timeline-element--education:hover {
+    transform: scale(1.05); 
+  }
+  
+  .vertical-timeline-element--education:hover .vertical-timeline-element-date {
+    color: hsl(65, 93%, 63%);
+  }
+  
+  .vertical-timeline-element--education h3.vertical-timeline-element-title {
+    margin: 5px 0; 
+    font-size: 16px;
+    color: #333; 
+    font-weight: 600;
+    cursor: default;
+    letter-spacing: 3;
+  }
+  
+  .vertical-timeline-element--education h4.vertical-timeline-element-subtitle {
+    margin: 5px 0; 
+    font-size: 13px;
+    color: #333; 
+    font-weight: 400;
+    cursor: default;
+  }
+  
+  .school-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover; 
+    border-radius: 8px; 
+  }
+  
