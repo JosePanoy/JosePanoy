@@ -17,6 +17,9 @@ const Navbar = ({ onNavigate }) => {
             <a onClick={() => handleNavigate('experience')}>EXPERIENCE</a>
           </li>
           <li>
+            <a onClick={() => handleNavigate('projects')}>PROJECTS</a>
+          </li>
+          <li>
             <a onClick={() => handleNavigate('about')}>ABOUT</a>
           </li>
         </ul>

@@ -71,8 +71,8 @@ function Experience() {
       <Timeline />
     </div>
 
-    <div>
-      <h1>Projects & Side Projects</h1>
+    <div > {/* Adjust the margin value as needed */}
+      <h1 style={{ marginTop: '150px' }}>Thesis & Side Projects</h1>
       <SideProjects />
     </div>
 
