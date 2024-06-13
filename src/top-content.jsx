@@ -1,27 +1,29 @@
 import React from 'react';
 import MainPicture from './assets/img/3.jpg';
-import { Fade } from 'react-reveal';
+import { Fade } from 'react-awesome-reveal'; // Import from react-awesome-reveal
 
 function TopContent() {
     return (
         <>
-            <Fade up>
+            <Fade direction="up" triggerOnce>
                 <div className="topContent">
                     <div className="leftSide">
-                        <Fade left>
+                        <Fade direction="left" triggerOnce>
                             <img className="profilePic" src={MainPicture} alt="Profile Picture" />
                         </Fade>
                     </div>
                     <div className="rightSide">
-                        <Fade right>
+                        <Fade direction="right" triggerOnce>
                             <h6>Aspiring Developer</h6>
                         </Fade>
-                        <Fade right>
+                        <Fade direction="right" triggerOnce>
                             <h3>Jan Rasheed</h3>
                         </Fade>
                     </div>
                 </div>
+            </Fade>
 
+            <Fade direction="up" triggerOnce>
                 <div className="midCaption">
                     <h3> -From pixels to passion.</h3>
                     <ul></ul>

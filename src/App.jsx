@@ -3,7 +3,7 @@ import Navbar from './navbar.jsx';
 import About from './assets/pages/about.jsx';
 import Experience from './assets/pages/experience.jsx';
 import Home from './assets/pages/home.jsx';
-import Projects from './assets/pages/projects.jsx'; // Import the Projects component
+import Projects from './assets/pages/projects.jsx'; 
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
