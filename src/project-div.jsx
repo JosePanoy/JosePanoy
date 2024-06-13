@@ -1,7 +1,7 @@
 import React from 'react';
 import './assets/css/projectdiv.css';
 import MainPicture from './assets/img/18.png';
-import { Fade } from 'react-awesome-reveal'; // Import Fade from react-awesome-reveal
+import { Fade } from 'react-awesome-reveal'; 
 
 function SideProjects() {
     return (
