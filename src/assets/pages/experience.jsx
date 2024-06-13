@@ -1,7 +1,7 @@
 import React from 'react';
 import SkillMeter from '../../skills.jsx'; 
 import Timeline from '../../school-div.jsx'; 
-import SideProjects from '../../project-div.jsx'; 
+
 import WorkTimeline from '../../work-exp.jsx'; 
 import { Fade } from 'react-reveal';
 import '../css/exp.css'
@@ -67,14 +67,13 @@ function Experience() {
 
 
     <div>
+      <Fade left delay={200} >
       <h1>My Education Timeline</h1>
+      </Fade>
       <Timeline />
     </div>
 
-    <div > {/* Adjust the margin value as needed */}
-      <h1 style={{ marginTop: '150px' }}>Thesis & Side Projects</h1>
-      <SideProjects />
-    </div>
+
 
 
     </>

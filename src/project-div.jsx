@@ -2,6 +2,7 @@ import './assets/css/projectdiv.css';
 import MainPicture from './assets/img/18.png'; 
 import { Fade } from 'react-reveal';
 
+
 function SideProjects() {
     return (
         <div className="project-container">

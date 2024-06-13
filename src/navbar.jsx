@@ -10,17 +10,17 @@ const Navbar = ({ onNavigate }) => {
       <h2>Jose Panoy</h2>
       <nav>
         <ul>
-        <li>
+          <li>
             <a onClick={() => handleNavigate('home')}>HOME</a>
           </li>
           <li>
             <a onClick={() => handleNavigate('experience')}>EXPERIENCE</a>
           </li>
           <li>
-            <a onClick={() => handleNavigate('projects')}>PROJECTS</a>
+            <a onClick={() => handleNavigate('about')}>ABOUT</a>
           </li>
           <li>
-            <a onClick={() => handleNavigate('about')}>ABOUT</a>
+            <a onClick={() => handleNavigate('projects')}>PROJECTS</a>
           </li>
         </ul>
       </nav>
