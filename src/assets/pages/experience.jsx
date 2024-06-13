@@ -2,8 +2,7 @@ import React from 'react';
 import SkillMeter from '../../skills.jsx'; 
 import Timeline from '../../school-div.jsx'; 
 import WorkTimeline from '../../work-exp.jsx'; 
-import { Fade } from 'react-awesome-reveal'; // Import Fade from react-awesome-reveal
-import '../css/exp.css';
+import { Fade } from 'react-awesome-reveal'; 
 
 const events = [
   {
