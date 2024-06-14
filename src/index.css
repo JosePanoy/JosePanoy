@@ -154,20 +154,21 @@ font-weight: normal;
 
 .midCaption {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
-    text-align: center; position: relative;
+    margin-top: 120px; 
+    text-align: center;
 }
 
-.midCaption h3{
+.midCaption h3 {
     font-size: 15px;
     font-weight: 300;
     color: hsl(0, 0%, 85%);
     letter-spacing: 1px;
-   cursor: default;
+    cursor: default;
+    margin-bottom: 10px;
 }
-
 
 
 /* Responsive adjustments */
@@ -190,6 +191,18 @@ font-weight: normal;
         padding-left: 0;
         padding-top: 10px;
     }
+
+    .midCaption {
+        text-align: center;
+        display: flex; 
+        align-items: center; 
+    }
+    
+    .midCaption h3 {
+        font-size: 13px;
+        margin: 0 auto; 
+    }
+    
 }
 
 .rightSide h3 {
