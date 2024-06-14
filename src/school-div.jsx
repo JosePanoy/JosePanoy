@@ -52,7 +52,7 @@ const Timeline = () => {
         date="2008-2013"
       >
         <h3 className="vertical-timeline-element-title">Sulong Elementary School</h3>
-        <h4 className="vertical-timeline-element-subtitle">Brgy. Sulonog, Alimodian, Iloilo</h4>
+        <h4 className="vertical-timeline-element-subtitle">Brgy. Sulong, Alimodian, Iloilo</h4>
         <img src={school5} alt="Western Institute of Technology" className="school-image" />
       </VerticalTimelineElement>
     </VerticalTimeline>
