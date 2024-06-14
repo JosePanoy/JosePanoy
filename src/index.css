@@ -177,6 +177,8 @@ font-weight: normal;
         text-align: center;
         padding: 20px;
         margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .profilePic {
