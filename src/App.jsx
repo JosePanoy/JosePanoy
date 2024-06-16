@@ -19,7 +19,7 @@ const App = () => {
         return <About />;
       case 'experience':
         return <Experience />;
-      case 'projects': // Add a case for the 'projects' page
+      case 'projects': 
         return <Projects />;
       default:
         return <Home />;
