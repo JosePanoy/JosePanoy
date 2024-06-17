@@ -1,0 +1,20 @@
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .slider-container {
+    margin-top: 20px;
+    height: 300px;
+  }
+  
+  .slider-item {
+    text-align: center;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+  }
+  
