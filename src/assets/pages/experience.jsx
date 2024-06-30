@@ -33,7 +33,7 @@ function Experience() {
             <SkillMeter skill="JavaScript" proficiency={85} />
           </Fade>
           <Fade direction="left" delay={800} triggerTwice>
-            <SkillMeter skill="React.js" proficiency={40} />
+            <SkillMeter skill="React.js" proficiency={60} />
           </Fade>
         </div>
         <div className="column-right">
