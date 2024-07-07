@@ -50,10 +50,10 @@ function Experience() {
       </div>
 
       <div>
-        <Fade direction="left" delay={200} triggerTwice>
+        <Fade direction="left" delay={500} triggerTwice>
           <h1>Work Timeline</h1>
         </Fade>
-        <Fade direction="right" delay={200} triggerTwice>
+        <Fade direction="right" delay={500} triggerTwice>
           <WorkTimeline events={events} />
         </Fade>
       </div>

@@ -4,13 +4,13 @@ h1{
     letter-spacing: 3px;
     text-align: center;
     cursor: default;
+    margin-top: 20px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     text-align: center;
-
   }
   
   .skill-line {
@@ -57,7 +57,8 @@ h1{
     color: #ededed;
     cursor: default;
     font-weight: 500;
-    margin-bottom: 190px;
+    margin-bottom: 235px;
+    margin-top: 20px;
   }
   
   .container h2 {

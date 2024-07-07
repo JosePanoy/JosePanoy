@@ -19,8 +19,8 @@ const AboutSlider1 = () => {
   };
 
   return (
-    <div className="main-container"> {/* Apply main-container class here */}
-      <div className="slider-container"> {/* Apply slider-container class here */}
+    <div className="main-container"> 
+      <div className="slider-container"> 
         <Slider {...settings}>
           <div>
             <img src={image1} alt="Slide 1" />

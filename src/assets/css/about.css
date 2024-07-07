@@ -8,6 +8,7 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px; 
+    margin-bottom: 50px;
   }
   
   .top-profile:hover {

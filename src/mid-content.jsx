@@ -10,30 +10,30 @@ import VidLeft from './assets/img/vid2.mp4';
 function MidContent() {
     return (
         <div className="midContainer">
-            <Fade direction="left" triggerTwice>
+            <Slide direction='right' delay={400}  triggerTwice>
                 <div className="topleft">
                     <img src={TopLeft} alt="" />
                     <div className="caption">Roadtrips!</div>
                 </div>
-            </Fade>
-            <Fade direction="right" triggerTwice>
+            </Slide>
+            <Slide direction='right' delay={400}  triggerTwice>
                 <div className="topright">
                     <img src={TopRight} alt="" />
                     <div className="caption">School Boy</div>
                 </div>
-            </Fade>
-            <Slide direction="left" triggerTwice>
+            </Slide>
+            <Fade direction="left" triggerTwice>
                 <div className="botright">
                     <video src={VidRight} controls />
                     <div className="caption">Nice Attempt</div>
                 </div>
-            </Slide>
-            <Slide direction="left" triggerTwice>
+            </Fade>
+            <Fade direction="left" triggerTwice>
                 <div className="botright">
                     <video src={VidLeft} controls />
                     <div className="caption">Gooaal!</div>
                 </div>
-            </Slide>
+            </Fade>
             <Fade direction="left" triggerTwice>
                 <div className="midleft">
                     <img src={MidLeft} alt="" />
