@@ -37,13 +37,13 @@ function Experience() {
           </Fade>
         </div>
         <div className="column-right">
-          <Fade direction="right" delay={200} triggerTwice>
+          <Fade direction="left" delay={200} triggerTwice>
             <SkillMeter skill="jQuery" proficiency={75} />
           </Fade>
-          <Fade direction="right" delay={400} triggerTwice>
+          <Fade direction="left" delay={400} triggerTwice>
             <SkillMeter skill="CSS" proficiency={90} />
           </Fade>
-          <Fade direction="right" delay={600} triggerTwice>
+          <Fade direction="left" delay={600} triggerTwice>
             <SkillMeter skill="Bootstrap" proficiency={50} />
           </Fade>
         </div>

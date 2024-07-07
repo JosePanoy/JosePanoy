@@ -6,22 +6,23 @@ import MidRight from './assets/img/11.jpeg';
 import MidLeft from './assets/img/8.jpg';
 import VidRight from './assets/img/vid1.mp4';
 import VidLeft from './assets/img/vid2.mp4';
+import { FaDeezer } from 'react-icons/fa6';
 
 function MidContent() {
     return (
         <div className="midContainer">
-            <Slide direction='right' delay={400}  triggerTwice>
+            <Fade direction='right' delay={400}  triggerTwice>
                 <div className="topleft">
                     <img src={TopLeft} alt="" />
                     <div className="caption">Roadtrips!</div>
                 </div>
-            </Slide>
-            <Slide direction='right' delay={400}  triggerTwice>
+            </Fade>
+            <Fade direction='right' delay={400}  triggerTwice>
                 <div className="topright">
                     <img src={TopRight} alt="" />
                     <div className="caption">School Boy</div>
                 </div>
-            </Slide>
+            </Fade>
             <Fade direction="left" triggerTwice>
                 <div className="botright">
                     <video src={VidRight} controls />
