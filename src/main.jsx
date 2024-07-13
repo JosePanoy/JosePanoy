@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
 import App from './App';
 import TodoList from './assets/sideprojects/todolist';
+import Calculator from './assets/sideprojects/calculator';
 import './index.css';
 
 const root = createRoot(document.getElementById('root'));
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/todolist" element={<TodoList />} />
+        <Route path="/calculator" element={<Calculator />} />
       </Routes>
 
 
