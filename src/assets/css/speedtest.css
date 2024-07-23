@@ -202,7 +202,7 @@
     }
   
     .results {
-      max-height: 300px; 
+      max-height: 400px; 
       width: 100%;
     }
   
@@ -211,10 +211,10 @@
     }
 
     .details h4 {
-        font-size: 16px;
+        font-size: 14px;
       }
       
       .details p, .details ol, .details ul {
-        font-size: 12px;
+        font-size: 11px;
       }
   }
