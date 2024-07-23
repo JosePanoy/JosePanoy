@@ -14,10 +14,24 @@
   
   h1 {
     text-align: center;
-    color: hsl(0, 0%, 15%);
     margin-bottom: 20px;
     cursor: default;
   }
+
+  .h1-cook {
+    font-size: 24px;
+    font-weight: bold;
+    color: hsl(0, 0%, 15%);
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
 
   h3{
     cursor: default;
@@ -145,15 +159,33 @@
     text-align: left;
   }
   
+
   @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+      margin: 10px; 
+    }
+  
+    .results {
+      max-height: 350px; 
+    }
+  
     .recipe-card {
       width: calc(100% - 20px);
     }
   }
   
   @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+      margin: 5px; 
+    }
+  
+    .results {
+      max-height: 300px; 
+    }
+  
     .recipe-card {
       width: 100%;
     }
   }
-  

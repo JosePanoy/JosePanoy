@@ -60,7 +60,7 @@ function RecipeFinder() {
       </div>
 
       <div className="container">
-        <h1>Recipe Finder</h1>
+        <h1 className="h1-cook">Recipe Finder</h1>
         <div className="search-container1">
           <input 
             type="text" 
