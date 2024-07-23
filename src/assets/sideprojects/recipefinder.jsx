@@ -59,7 +59,7 @@ function RecipeFinder() {
         <Link to="/" className="home-button">Home</Link>
       </div>
 
-      <div className="container">
+      <div className="container-recipe">
         <h1 className="h1-cook">Recipe Finder</h1>
         <div className="search-container1">
           <input 

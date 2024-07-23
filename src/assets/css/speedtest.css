@@ -1,4 +1,4 @@
-.container {
+.container-recipe {
     width: 90%;
     max-width: 700px;
     margin: 0 auto;
@@ -169,7 +169,7 @@
 
 
   @media (max-width: 768px) {
-    .container {
+    .container-recipe {
       padding: 15px;
       margin: 10px; 
     }
@@ -195,7 +195,7 @@
 
 
   @media (max-width: 480px) {
-    .container {
+    .container-recipe {
       padding: 10px;
       margin: 5px; 
       margin-top: 20px;
