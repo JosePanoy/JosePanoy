@@ -202,12 +202,12 @@
     }
   
     .results {
-      max-height: 400px; 
+      max-height: 450px; 
       width: 100%;
     }
   
     .recipe-card {
-      width: 100%;
+      width: 90%;
       padding: 5px;
     }
 
@@ -219,7 +219,9 @@
         font-size: 11px;
       }
 
-      .recipe-image {
-        margin: 5px;
+      .toggle-button1 {
+        padding: 4px 8px;
+        height: 30px;   
+        font-size: 14px;
       }
   }
