@@ -88,6 +88,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: 5;
+    overflow-y: auto;
 }
 
 .side-panel-movie.visible {
@@ -95,6 +96,118 @@
     opacity: 1;
     visibility: visible;
 }
+
+.side-panel-content {
+    padding: 0;
+}
+
+.genre-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.genre-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.genre-list li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.genre-list li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+
+.moviefind-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.movie-tile {
+    width: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: hsl(0, 0%, 79%);
+}
+
+.movie-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.movie-tile img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-tile h4 {
+    margin: 10px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.latest-movies-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.latest-movies-title {
+    font-size: 1.5rem;
+    color: #d7d7d7;
+    margin-bottom: 15px;
+    cursor: default;
+}
+.movie-rating {
+    font-size: 0.9rem;
+    color: hsl(209, 98%, 37%); 
+    margin-top: -3px;
+}
+
+.top-watched-section {
+    margin-top: 30px;
+}
+
+.top-watched-title {
+    font-size: 1.5rem;
+    color: #d7d7d7;
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.top-watched-movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 30px 0;
+}
+
 
 @media (max-width: 1080px) {
     .movie-navbar {
@@ -148,6 +261,13 @@
         height: calc(40vh - 50px);
         top: 60px;
     }
+    .latest-movies, .top-watched-movies {
+        gap: 10px; 
+    }
+    
+    .movie-tile {
+        width: calc(50% - 10px); 
+    }
 }
 
 @media (max-width: 480px) {
@@ -172,7 +292,14 @@
 
     .side-panel-movie {
         width: 50%;
-        height: calc(70vh - 40px);
+        height: calc(70vh - 30px);
         top: 100px;
+    }
+    .latest-movies, .top-watched-movies {
+        gap: 15px; 
+    }
+    
+    .movie-tile {
+        width: calc(50% - 15px); 
     }
 }
