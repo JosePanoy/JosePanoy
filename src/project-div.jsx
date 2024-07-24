@@ -4,6 +4,7 @@ import MainPicture from './assets/img/18.png';
 import TodolistPic from './assets/img/todolist.gif'
 import CalculatorPic from './assets/img/calculator.gif'
 import RecipeFinder from './assets/img/cooking.gif'
+import MovieFind from './assets/img/movie.gif'
 import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +24,7 @@ function SideProjects() {
             <Link to="/recipefinder" style={{backgroundImage: `url(${RecipeFinder})`}} className="project-item" data-title="Recipe Finder"></Link>
             </Fade>
             <Fade direction="left" delay={400}>
-                <div className="project-item" data-title="Project 5">Project 5</div>
+            <Link to="/moviefind" style={{backgroundImage: `url(${MovieFind})`}} className="project-item" data-title="Movie Find"></Link>
             </Fade>
             <Fade direction="right" delay={400}>
                 <div className="project-item" data-title="Project 6">Project 6</div>
