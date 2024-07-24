@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faBars, faFilm } from '@fortawesome/free-solid-svg-icons';
 import './../css/moviefind.css';
 
 function MovieFind() {
@@ -17,27 +17,28 @@ function MovieFind() {
         setSidePanelVisible(prevState => !prevState);
     };
 
-    const fetchMovies = async (query = '') => {
+    const fetchMovies = async (query = '', genreId = '') => {
         const API_KEY = import.meta.env.VITE_TMDb_API_KEY;
-        const url = query 
-            ? `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=1`
-            : `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+        let url = '';
+
+        if (query) {
+            url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=1`;
+        } else if (genreId) {
+            url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&language=en-US&page=1&sort_by=release_date.desc`;
+        } else {
+            url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
+        }
 
         try {
             const response = await fetch(url);
             const data = await response.json();
-            if (query) {
+            if (query || genreId) {
                 if (data.results.length > 0) {
-                    let sortedResults = data.results;
-                    if (query) {
-                        // Sort by rating (highest to lowest)
-                        sortedResults = sortedResults.sort((a, b) => b.vote_average - a.vote_average);
-                    }
-                    setSearchResults(sortedResults);
+                    setSearchResults(data.results);
                     setNoResultsMessage('');
                 } else {
                     setSearchResults([]);
-                    setNoResultsMessage(`No results found for "${query}"`);
+                    setNoResultsMessage(query ? `No results found for "${query}"` : 'No results found for this category');
                 }
             } else {
                 setLatestMovies(data.results);
@@ -75,7 +76,7 @@ function MovieFind() {
         };
 
         fetchGenres();
-        fetchMovies(); // Fetch latest movies by default
+        fetchMovies(); 
         fetchTopWatchedMovies();
     }, []);
 
@@ -85,6 +86,14 @@ function MovieFind() {
 
     const handleInputChange = (e) => {
         setSearchQuery(e.target.value);
+    };
+
+    const handleGenreClick = (genreId) => {
+        fetchMovies('', genreId);
+    };
+
+    const getImageUrl = (path) => {
+        return path ? `https://image.tmdb.org/t/p/w500${path}` : null;
     };
 
     return (
@@ -117,15 +126,15 @@ function MovieFind() {
                         </h3>
                         <ul className="genre-list">
                             {genres.map(genre => (
-                                <li key={genre.id}>{genre.name}</li>
+                                <li key={genre.id} onClick={() => handleGenreClick(genre.id)}>{genre.name}</li>
                             ))}
                         </ul>
                     </div>
                 </div>
-                {searchQuery ? (
+                {searchQuery || searchResults.length > 0 ? (
                     <div className="search-results-section">
                         <h2 className="latest-movies-title">
-                            Search Results for "{searchQuery}"
+                            {searchQuery ? `Search Results for "${searchQuery}"` : 'Category Results'}
                         </h2>
                         {noResultsMessage ? (
                             <p>{noResultsMessage}</p>
@@ -133,7 +142,14 @@ function MovieFind() {
                             <div className="latest-movies">
                                 {searchResults.map(movie => (
                                     <div key={movie.id} className="movie-tile">
-                                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                                        {getImageUrl(movie.poster_path) ? (
+                                            <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
+                                        ) : (
+                                            <div className="default-movie-icon">
+                                                <FontAwesomeIcon icon={faFilm} size="3x" />
+                                                <p>Image Unavailable</p>
+                                            </div>
+                                        )}
                                         <h4>{movie.title}</h4>
                                         <p className="movie-rating">Rating: {movie.vote_average.toFixed(1)}</p>
                                     </div>
@@ -148,7 +164,14 @@ function MovieFind() {
                             <div className="latest-movies">
                                 {latestMovies.map(movie => (
                                     <div key={movie.id} className="movie-tile">
-                                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                                        {getImageUrl(movie.poster_path) ? (
+                                            <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
+                                        ) : (
+                                            <div className="default-movie-icon">
+                                                <FontAwesomeIcon icon={faFilm} size="3x" />
+                                                <p>Image Unavailable</p>
+                                            </div>
+                                        )}
                                         <h4>{movie.title}</h4>
                                         <p className="movie-rating">Rating: {movie.vote_average.toFixed(1)}</p>
                                     </div>
@@ -161,7 +184,14 @@ function MovieFind() {
                             <div className="top-watched-movies">
                                 {topWatchedMovies.map(movie => (
                                     <div key={movie.id} className="movie-tile">
-                                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+                                        {getImageUrl(movie.poster_path) ? (
+                                            <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
+                                        ) : (
+                                            <div className="default-movie-icon">
+                                                <FontAwesomeIcon icon={faFilm} size="3x" />
+                                                <p>Image Unavailable</p>
+                                            </div>
+                                        )}
                                         <h4>{movie.title}</h4>
                                         <p className="movie-rating">Rating: {movie.vote_average.toFixed(1)}</p>
                                     </div>
