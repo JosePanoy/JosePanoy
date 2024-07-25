@@ -14,7 +14,7 @@ function TopContent() {
                     </div>
                     <div className="rightSide">
                         <Fade direction="right" triggerTwice>
-                            <h6>Aspiring Developer</h6>
+                            <h6>Web Developer</h6>
                         </Fade>
                         <Fade direction="right" triggerTwice>
                             <h3>Jan Rasheed</h3>
@@ -25,7 +25,7 @@ function TopContent() {
 
             <Fade direction="up" triggerTwice>
                 <div className="midCaption">
-                    <h3> -From pixels to passion.</h3>
+                    <h3> -I am passionate about crafting interactive and user-friendly web experiences.</h3>
                     <ul></ul>
                 </div>
             </Fade>

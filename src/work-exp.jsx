@@ -14,7 +14,7 @@ const WorkTimeline = ({ events }) => {
           </div>
           <div className="work-timeline-event-content">
             <h3>{event.title}</h3>
-            <p><span className="bullet">&#8226;</span> {event.description}</p> {/* Add bullet point here */}
+            <p><span className="bullet">&#8226;</span> {event.description}</p> 
           </div>
         </div>
       ))}

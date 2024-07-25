@@ -1,4 +1,4 @@
-.container-work{
+.container-work {
   margin-bottom: 200px;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .work-timeline-line::before {
-  content: '\2022'; 
+  content: '\2022';
   position: absolute;
   top: 50%;
   left: -5px;
@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 800; 
+  font-weight: 800;
 }
 
 .work-timeline-event-content {
@@ -63,8 +63,8 @@
 
 .work-timeline-event-content h3 {
   margin-top: 0;
-  font-size: 20px; 
-  color: #333; 
+  font-size: 20px;
+  color: #333;
   cursor: default;
   font-weight: 700;
 }
@@ -73,7 +73,7 @@
   margin: 0;
   font-size: 13px;
   font-weight: 500;
-  color: #666; 
+  color: #666;
   cursor: default;
 }
 
@@ -82,33 +82,57 @@
   color: #666;
 }
 
-/* Media query for smaller screens */
 @media (max-width: 768px) {
+  .work-timeline-event {
+    flex-direction: column;
+  }
+
   .work-timeline-event-date {
-      width: auto;
-      padding: 5px;
-      font-size: 12px;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
   }
 
   .work-timeline-event-content {
-      padding: 10px;
+    padding: 10px;
   }
 
   .work-timeline-event-content h3 {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .work-timeline-event-content p {
-      font-size: 12px;
+    font-size: 12px;
   }
+
   .work-timeline-line {
     display: none;
+  }
 }
 
-h1 {
-  font-size: 22px;
-}
-h2 {
-  font-size: 22px;
-}
+@media (max-width: 480px) {
+  .container-work {
+    margin-bottom: 100px;
+  }
+
+  .work-timeline-event {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .work-timeline-event-date {
+    font-size: 11px;
+  }
+
+  .work-timeline-event-content {
+    padding: 8px;
+  }
+
+  .work-timeline-event-content h3 {
+    font-size: 14px;
+  }
+
+  .work-timeline-event-content p {
+    font-size: 11px;
+  }
 }
