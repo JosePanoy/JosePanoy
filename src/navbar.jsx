@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-import './assets/css/navbar.css';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = ({ onNavigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +16,8 @@ const Navbar = ({ onNavigate }) => {
   return (
     <div className="nav-bar">
       <h2>Jose Panoy</h2>
-      <button className="menu-toggle" onClick={toggleMenu}>
-        <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
+      <button className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <FontAwesomeIcon icon={faBars} />
       </button>
       <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
         <ul>
