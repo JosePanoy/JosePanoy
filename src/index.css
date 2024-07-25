@@ -90,7 +90,7 @@ font-weight: normal;
 
     .nav-bar ul {
         flex-direction: row;
-        justify-content: center; /* Center the links horizontally */
+        justify-content: center; 
         gap: 15px;
     }
 
