@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faBars, faFilm } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faBars, faFilm, faXmark } from '@fortawesome/free-solid-svg-icons';
 import './../css/moviefind.css';
 
 function MovieFind() {
@@ -12,6 +12,7 @@ function MovieFind() {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
     const [noResultsMessage, setNoResultsMessage] = useState('');
+    const [selectedMovie, setSelectedMovie] = useState(null);
 
     const toggleSidePanel = () => {
         setSidePanelVisible(prevState => !prevState);
@@ -47,6 +48,20 @@ function MovieFind() {
             console.error("Error fetching movies", error);
         }
     };
+
+    const fetchMovieDetails = async (movieId) => {
+        const API_KEY = import.meta.env.VITE_TMDb_API_KEY;
+        const url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US&append_to_response=credits,videos`;
+    
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            setSelectedMovie(data);
+        } catch (error) {
+            console.error("Error fetching movie details", error);
+        }
+    };
+    
 
     useEffect(() => {
         const fetchGenres = async () => {
@@ -96,6 +111,14 @@ function MovieFind() {
         return path ? `https://image.tmdb.org/t/p/w500${path}` : null;
     };
 
+    const handleTileClick = (movieId) => {
+        fetchMovieDetails(movieId);
+    };
+
+    const closeModal = () => {
+        setSelectedMovie(null);
+    };
+
     return (
         <>
             <div className="navbar">
@@ -141,7 +164,7 @@ function MovieFind() {
                         ) : (
                             <div className="latest-movies">
                                 {searchResults.map(movie => (
-                                    <div key={movie.id} className="movie-tile">
+                                    <div key={movie.id} className="movie-tile" onClick={() => handleTileClick(movie.id)}>
                                         {getImageUrl(movie.poster_path) ? (
                                             <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
                                         ) : (
@@ -163,7 +186,7 @@ function MovieFind() {
                             <h2 className="latest-movies-title">Latest Movies Release</h2>
                             <div className="latest-movies">
                                 {latestMovies.map(movie => (
-                                    <div key={movie.id} className="movie-tile">
+                                    <div key={movie.id} className="movie-tile" onClick={() => handleTileClick(movie.id)}>
                                         {getImageUrl(movie.poster_path) ? (
                                             <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
                                         ) : (
@@ -183,7 +206,7 @@ function MovieFind() {
                             <h2 className="top-watched-title">Top Watched Movies</h2>
                             <div className="top-watched-movies">
                                 {topWatchedMovies.map(movie => (
-                                    <div key={movie.id} className="movie-tile">
+                                    <div key={movie.id} className="movie-tile" onClick={() => handleTileClick(movie.id)}>
                                         {getImageUrl(movie.poster_path) ? (
                                             <img src={getImageUrl(movie.poster_path)} alt={movie.title} />
                                         ) : (
@@ -201,6 +224,52 @@ function MovieFind() {
                     </>
                 )}
             </div>
+                {selectedMovie && (
+        <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <button className="close-modal" onClick={closeModal}>
+                    <FontAwesomeIcon icon={faXmark} />
+                </button>
+
+                <h2>{selectedMovie.title}</h2>
+                {selectedMovie.videos.results.length > 0 && selectedMovie.videos.results[0].key ? (
+                  <div className="video-wrapper" style={{ position: 'relative', width: '100%', paddingTop: '56.25%', height: '0', marginBottom: '15px', borderRadius: '8px' }}>
+                  <iframe
+                      src={`https://www.youtube.com/embed/${selectedMovie.videos.results[0].key}`}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title="Trailer"
+                      style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', border: 'none' }}
+                  ></iframe>
+              </div>
+              
+                ) : (
+                    <p>No trailer available</p>
+                )}
+                <p>{selectedMovie.overview}</p>
+                <h3>Cast</h3>
+                <table className="actor-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Character</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {selectedMovie.credits.cast.slice(0, 5).map(actor => (
+                            <tr key={actor.cast_id}>
+                                <td>{actor.name}</td>
+                                <td>{actor.character}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    )}
+
+
+
         </>
     );
 }
