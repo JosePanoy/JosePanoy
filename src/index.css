@@ -114,23 +114,26 @@ body {
         position: absolute;
         top: 100%;
         right: 0;
-        width: 100%;
+        width: calc(100% - 20px); 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         flex-direction: column;
         gap: 0;
         z-index: 1000;
         background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(5px);
         transform: translateY(-20px);
         opacity: 0;
         transition: transform 0.3s ease, opacity 0.3s ease;
+        border-radius: 8px;
+        margin: 0 10px; 
     }
-
+    
     .nav-menu.open {
         display: flex;
         transform: translateY(0);
         opacity: 1;
     }
+    
 
     .nav-menu ul {
         flex-direction: column;
@@ -149,6 +152,7 @@ body {
         font-size: 16px;
         color: #ecf0f1;
         text-decoration: none;
+        letter-spacing: 3px;
     }
 }
 
