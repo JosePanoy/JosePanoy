@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillMeter from '../../skills.jsx'; 
+import Skills from '../../skills.jsx'; 
 import Timeline from '../../school-div.jsx'; 
 import WorkTimeline from '../../work-exp.jsx'; 
 import { Fade } from 'react-awesome-reveal'; 
@@ -21,33 +21,7 @@ function Experience() {
         </Fade>
       </div>
 
-      <div className="experience-container">
-        <div className="column-left">
-          <Fade direction="left" delay={200} triggerTwice>
-            <SkillMeter skill="PHP" proficiency={80} />
-          </Fade>
-          <Fade direction="left" delay={400} triggerTwice>
-            <SkillMeter skill="HTML" proficiency={95} />
-          </Fade>
-          <Fade direction="left" delay={600} triggerTwice>
-            <SkillMeter skill="JavaScript" proficiency={85} />
-          </Fade>
-          <Fade direction="left" delay={800} triggerTwice>
-            <SkillMeter skill="React.js" proficiency={60} />
-          </Fade>
-        </div>
-        <div className="column-right">
-          <Fade direction="left" delay={200} triggerTwice>
-            <SkillMeter skill="jQuery" proficiency={75} />
-          </Fade>
-          <Fade direction="left" delay={400} triggerTwice>
-            <SkillMeter skill="CSS" proficiency={90} />
-          </Fade>
-          <Fade direction="left" delay={600} triggerTwice>
-            <SkillMeter skill="Bootstrap" proficiency={50} />
-          </Fade>
-        </div>
-      </div>
+      <Skills/>
 
       <div>
         <Fade direction="left" delay={500} triggerTwice>
