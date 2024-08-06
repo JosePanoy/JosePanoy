@@ -1,52 +1,87 @@
 import React from 'react';
-import { Fade, Slide } from 'react-awesome-reveal';
+import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
+
 import TopRight from './assets/img/1.jpg';
 import TopLeft from './assets/img/7.jpg';
 import MidRight from './assets/img/11.jpeg';
 import MidLeft from './assets/img/8.jpg';
 import VidRight from './assets/img/vid1.mp4';
 import VidLeft from './assets/img/vid2.mp4';
-import { FaDeezer } from 'react-icons/fa6';
+
 
 function MidContent() {
+
+    const { ref, inView } = useInView({
+        triggerOnce: false, 
+        threshold: 0.1,
+      });
+    
+      const fadeInLeft1 = useSpring({
+        opacity: 1,
+        transform: 'translateX(0)',
+        from: { opacity: 0, transform: 'translateX(-100px)' },
+        config: { duration: 1500 },
+        reset: true,
+      });
+
+      const fadeInRight1 = useSpring({
+        opacity: 1,
+        transform: 'translateX(0)',
+        from: { opacity: 0, transform: 'translateX(100px)' },
+        config: { duration: 3500 },
+        reset: true,
+      });
+
+      const fadeInLeft2 = useSpring({
+        opacity: 1,
+        transform: 'translateX(0)',
+        from: { opacity: 0, transform: 'translateX(-100px)' },
+        config: { duration: 3000 },
+        reset: true,
+      });
+
+
+
+
     return (
-        <div className="midContainer">
-            <Fade direction='right' delay={400}  triggerTwice>
-                <div className="topleft">
+        <div ref={ref} className="midContainer">
+            
+                <animated.div  ref={ref} style={fadeInLeft1} className="topleft">
                     <img src={TopLeft} alt="" />
                     <div className="caption">Roadtrips!</div>
-                </div>
-            </Fade>
-            <Fade direction='right' delay={400}  triggerTwice>
-                <div className="topright">
+                </animated.div>
+          
+            
+                <animated.div  ref={ref} style={fadeInLeft1} className="topright">
                     <img src={TopRight} alt="" />
                     <div className="caption">School Boy</div>
-                </div>
-            </Fade>
-            <Fade direction="left" triggerTwice>
-                <div className="botright">
+                </animated.div>
+            
+           
+                <animated.div  ref={ref} style={fadeInLeft2} className="botright">
                     <video src={VidRight} controls />
                     <div className="caption">Nice Attempt</div>
-                </div>
-            </Fade>
-            <Fade direction="left" triggerTwice>
-                <div className="botright">
+                </animated.div>
+            
+            
+                <animated.div  ref={ref} style={fadeInLeft2} className="botright">
                     <video src={VidLeft} controls />
                     <div className="caption">Gooaal!</div>
-                </div>
-            </Fade>
-            <Fade direction="left" triggerTwice>
-                <div className="midleft">
+                </animated.div>
+           
+          
+                <animated.div  ref={ref} style={fadeInRight1} className="midleft">
                     <img src={MidLeft} alt="" />
                     <div className="caption">Fam!</div>
-                </div>
-            </Fade>
-            <Fade direction="right" triggerTwice>
-                <div className="midright">
+                </animated.div>
+            
+          
+                <animated.div  ref={ref} style={fadeInRight1} className="midright">
                     <img src={MidRight} alt="" />
                     <div className="caption">SoftDev OJT Mates!</div>
-                </div>
-            </Fade>
+                </animated.div>
+           
         </div>
     );
 }

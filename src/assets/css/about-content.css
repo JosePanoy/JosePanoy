@@ -1,11 +1,12 @@
 .aboutcontent {
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 150px;
 }
 
 .aboutcontent:hover {
