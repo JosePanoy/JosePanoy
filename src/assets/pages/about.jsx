@@ -5,9 +5,11 @@ import backimg3 from '../img/4.jpg';
 import backimg4 from '../img/6.jpg';
 import { Fade } from 'react-awesome-reveal';
 import Slider from 'react-slick';
+import AboutContent from '../../about-content.jsx';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../css/about.css';
+
 
 const AboutPage = () => {
   const settings = {
@@ -24,6 +26,8 @@ const AboutPage = () => {
   };
 
   return (
+
+    <>
     <Fade direction='top' delay={200}>
       <div className="top-profile">
         <div className="image-container">
@@ -54,6 +58,11 @@ const AboutPage = () => {
         </div>
       </div>
     </Fade>
+
+    <AboutContent/>
+
+
+  </>
   );
 };
 
