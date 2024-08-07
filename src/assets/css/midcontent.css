@@ -47,7 +47,7 @@
     opacity: 1;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -55,14 +55,14 @@
     }
 
     .grid-item {
-        height: auto; /* Adjust height for mobile */
+        height: auto; 
     }
 
     .grid-item img,
     .grid-item video {
         width: 100%;
-        height: auto; /* Maintain aspect ratio for landscape content */
-        object-fit: contain; /* Fit content without cropping */
-        object-position: center; /* Center the content */
+        height: auto; 
+        object-fit: contain;
+        object-position: center; 
     }
 }
