@@ -9,7 +9,7 @@ import CalculatorPic from './assets/img/calculator.gif';
 import RecipeFinder from './assets/img/cooking.gif';
 import MovieFind from './assets/img/movie.gif';
 import CamPic from './assets/img/cam.png'
-import PFHPic from './assets/img/PFH.png'
+import PFHPic from './assets/img/pfh.png'
 import ShoeStorePic from './assets/img/shoestore.gif'
 import ServicePage from './assets/img/servicepage.gif'
 import { Link } from 'react-router-dom';
