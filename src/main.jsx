@@ -1,6 +1,6 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
+import { createRoot } from 'react-dom/client'; // Update this line
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import App from './App';
 import TodoList from './assets/sideprojects/todolist';
 import Calculator from './assets/sideprojects/calculator';
