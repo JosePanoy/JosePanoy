@@ -11,61 +11,47 @@ import VidRight from './assets/img/vid1.mp4';
 import VidLeft from './assets/img/vid2.mp4';
 
 function MidContent() {
-    const { ref, inView } = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
+
+    const fadeInFromBottom = (inView) => useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(70px)',
+        config: { duration: 1000 },
     });
 
-    const fadeInLeft1 = useSpring({
-        opacity: 1,
-        transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(-100px)' },
-        config: { duration: 1500 },
-        reset: true,
-    });
-
-    const fadeInRight1 = useSpring({
-        opacity: 1,
-        transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(100px)' },
-        config: { duration: 3000 },
-        reset: true,
-    });
-
-    const fadeInLeft2 = useSpring({
-        opacity: 1,
-        transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(-100px)' },
-        config: { duration: 3500 },
-        reset: true,
-    });
+    const items = [
+        { src: TopLeft, caption: 'Roadtrips!' },
+        { src: TopRight, caption: 'School Boy' },
+        { src: VidRight, caption: 'Nice Attempt', isVideo: true },
+        { src: VidLeft, caption: 'Gooaal!', isVideo: true },
+        { src: MidLeft, caption: 'Fam!' },
+        { src: MidRight, caption: 'SoftDev OJT Mates!' }
+    ];
 
     return (
-        <div ref={ref} className="grid-container">
-            <animated.div style={fadeInLeft1} className="grid-item">
-                <img src={TopLeft} alt="" />
-                <div className="caption">Roadtrips!</div>
-            </animated.div>
-            <animated.div style={fadeInLeft1} className="grid-item">
-                <img src={TopRight} alt="" />
-                <div className="caption">School Boy</div>
-            </animated.div>
-            <animated.div style={fadeInRight1} className="grid-item">
-                <video src={VidRight} controls />
-                <div className="caption">Nice Attempt</div>
-            </animated.div>
-            <animated.div style={fadeInRight1} className="grid-item">
-                <video src={VidLeft} controls />
-                <div className="caption">Gooaal!</div>
-            </animated.div>
-            <animated.div style={fadeInLeft2} className="grid-item">
-                <img src={MidLeft} alt="" />
-                <div className="caption">Fam!</div>
-            </animated.div>
-            <animated.div style={fadeInLeft2} className="grid-item">
-                <img src={MidRight} alt="" />
-                <div className="caption">SoftDev OJT Mates!</div>
-            </animated.div>
+        <div className="grid-container">
+            {items.map((item, index) => {
+                const { ref, inView } = useInView({
+                    triggerOnce: false,
+                    threshold: 0.1,
+                    delay: index * 250, 
+                });
+
+                return (
+                    <animated.div
+                        key={index}
+                        ref={ref}
+                        style={fadeInFromBottom(inView)}
+                        className="grid-item"
+                    >
+                        {item.isVideo ? (
+                            <video src={item.src} controls />
+                        ) : (
+                            <img src={item.src} alt="" />
+                        )}
+                        <div className="caption">{item.caption}</div>
+                    </animated.div>
+                );
+            })}
         </div>
     );
 }

@@ -18,16 +18,18 @@ function ContactInfo() {
     const fadeInLeft1 = useSpring({
         opacity: 1,
         transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(-50px)' },
-        config: { duration: 1000, easing: easings.linear },
+        from: { opacity: 0, transform: 'translateX(-150px)' },
+        config: { duration: 1200, easing: easings.linear },
         reset: true,
+        delay: 300,
       });
 
       const fadeInRight1 = useSpring({
         opacity: 1,
         transform: 'translateX(0)',
-        from: { opacity: 0, transform: 'translateX(200px)' },
-        config: { duration: 1000 },
+        from: { opacity: 0, transform: 'translateX(-150px)' },
+        config: { duration: 1200 },
+        delay: 100,
         reset: true,
       });
 
