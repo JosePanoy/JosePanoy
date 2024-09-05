@@ -74,14 +74,9 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Panoy Social</h3>
                     <p className="project-progress">Progress: 70%</p>
-                    <a
-                        href="http://panoysocial.vercel.app/"
-                        className="project-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit <FaExternalLinkAlt />
-                    </a>
+                    <span className="project-link-disabled">
+                    Visit <FaExternalLinkAlt />
+                </span>
                 </div>
             </animated.div>
 

@@ -110,3 +110,26 @@
     object-fit: contain; 
     border-radius: 10px; 
 }
+
+
+.project-link-disabled {
+    display: flex;
+    align-items: center;
+    color: #e0e0e0;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    cursor: default; /* Removes pointer cursor */
+}
+
+.project-link-disabled:hover {
+    color: #ffffff;
+    background: #333;
+    border-color: #ffffff;
+    text-decoration: none;
+}
