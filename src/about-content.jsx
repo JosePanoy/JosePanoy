@@ -8,17 +8,18 @@ import Githublogo from '../src/assets/sociallogo/github.png';
 import LinkedInlogo from '../src/assets/sociallogo/linkedin.png';
 
 function AboutContent() {
-    const { ref, inView } = useInView({
-        triggerOnce: false,
-        threshold: 0.1,
-    });
+  const { ref, inView } = useInView({
+    triggerOnce: false,  
+    threshold: 0.1,  
+});
 
-    const fadeInLeft = (index) => useSpring({
-        opacity: inView ? 1 : 0,
-        transform: inView ? 'translateX(0)' : 'translateX(-50px)',
-        config: { duration: 600 },
-        delay: index * 200,  // Staggering effect
-    });
+const fadeInLeft = (index) => useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateX(0)' : 'translateX(-100px)',
+    config: { duration: 600 },
+    delay: index * 200, 
+    reset: true,       
+});
 
     return (
         <div className="aboutcontent-container">
