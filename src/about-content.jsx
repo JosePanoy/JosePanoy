@@ -24,11 +24,16 @@ const fadeInLeft = (index) => useSpring({
     return (
         <div className="aboutcontent-container">
             <animated.div ref={ref} style={fadeInLeft(0)} className="aboutcontent">
-                <animated.p>
-                    Hi, I'm Jan Rasheed C. Calderon, a web developer from Brgy. Sulong, Alimodian, Iloilo with a degree in Bachelor of Science in Information Technology, focusing on front-end development. My passion for creating engaging and user-friendly web experiences drives my work, and I specialize in crafting clean, responsive interfaces that bring ideas to life. Throughout my studies and professional journey, I’ve developed a strong foundation in modern web technologies and design principles, allowing me to deliver high-quality solutions tailored to user needs.
-                    <br /><br />
-                    Outside of web development, I’m an avid football enthusiast. Whether it’s playing on the field or following the latest matches, football keeps me energized and balanced. This hobby not only provides a great outlet for relaxation but also inspires my approach to teamwork and strategy in my professional projects.
-                </animated.p>
+            <animated.p>
+                Hi, I'm <span class="underline-name">Jan Rasheed C. Calderon</span>, a web developer from Brgy. Sulong, Alimodian, Iloilo with a degree in Bachelor of Science in Information Technology, focusing on front-end development. My passion for creating engaging and user-friendly web experiences drives my work, and I specialize in crafting clean, responsive interfaces that bring ideas to life. Throughout my studies and professional journey, I’ve developed a strong foundation in modern web technologies and design principles, allowing me to deliver high-quality solutions tailored to user needs.
+                <br /><br />
+                Outside of web development, I’m an avid football enthusiast. Whether it’s playing on the field or following the latest matches, football keeps me energized and balanced. This hobby not only provides a great outlet for relaxation but also inspires my approach to teamwork and strategy in my professional projects.
+            </animated.p>
+
+
+
+
+
             </animated.div>
             <div className="social-section">
                 <p className="social-caption">
