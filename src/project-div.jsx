@@ -12,7 +12,8 @@ import CamPic from './assets/img/cam.png';
 import PFHPic from './assets/img/pfh.png';
 import ShoeStorePic from './assets/img/shoestore.gif';
 import ServicePage from './assets/img/servicepage.gif';
-import PanoySocial from './assets/mp4/panoysocial.mp4'; // Video Import
+import PanoySocial from './assets/mp4/panoysocial.mp4'; 
+import BombersFCsite from './assets/mp4/wordpress site.mp4';
 import { Link } from 'react-router-dom';
 
 function SideProjects() {
@@ -38,6 +39,7 @@ function SideProjects() {
     const fadeInFromBottom7 = fadeInFromBottom(1200);
     const fadeInFromBottom8 = fadeInFromBottom(1400);
     const fadeInFromBottom9 = fadeInFromBottom(1600);
+    const fadeInFromBottom10 = fadeInFromBottom(1800);
 
     return (
         <animated.div ref={ref} className="project-container">
@@ -235,6 +237,30 @@ function SideProjects() {
                     </a>
                 </div>
             </animated.div>
+
+
+            <animated.div
+                className="project-item"
+                style={fadeInFromBottom10}
+                data-title="Bombers FC site"
+            >
+                <video
+                    className="project-video"
+                    src={BombersFCsite}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+                <div className="project-details">
+                    <h3 className="project-title">Bombers FC site</h3>
+                    <p className="project-progress">Progress: 40%</p>
+                    <span className="project-link-disabled">
+                    Visit <FaExternalLinkAlt />
+                </span>
+                </div>
+            </animated.div>
+
         </animated.div>
     );
 }
