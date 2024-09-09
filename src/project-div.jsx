@@ -16,6 +16,23 @@ import PanoySocial from './assets/mp4/panoysocial.mp4';
 import BombersFCsite from './assets/mp4/wordpress site.mp4';
 import { Link } from 'react-router-dom';
 
+
+// import skills logo 
+import ReactLogo from '../src/assets/img/logo/react.png';
+import PHPLogo from '../src/assets/img/logo/php.png';
+import jQueryLogo from '../src/assets/img/logo/jquery.png';
+import JavascriptLogo from '../src/assets/img/logo/javascript.png';
+import BootstrapLogo from '../src/assets/img/logo/bootstrap.png';
+import HTMLLogo from '../src/assets/img/logo/html.png';
+import CSSLogo from '../src/assets/img/logo/css.png';
+import PhotoshopLogo from '../src/assets/img/logo/photoshop.png';
+import IllustratorLogo from '../src/assets/img/logo/illustrator.png';
+import GithubLogo from '../src/assets/img/logo/github.png';
+import NodeLogo from '../src/assets/img/logo/nodejs.png';
+import ExpressLogo from '../src/assets/img/logo/expressjs.png';
+import MongoLogo from '../src/assets/img/logo/mongodb.png';
+import WordPressLogo from '../src/assets/img/logo/wordpress.png';
+
 function SideProjects() {
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -54,6 +71,12 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">WIT Online Library System</h3>
                     <p className="project-progress">Progress: 100%</p>
+                    <div className="skill-icons">
+                        <img src={PHPLogo} alt="PHP" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
                     <Link to="/wit-library" className="project-link">
                         Visit <FaExternalLinkAlt />
                     </Link>
@@ -76,6 +99,16 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Panoy Social</h3>
                     <p className="project-progress">Progress: 70%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={ExpressLogo} alt="React" className="skill-icon" />
+                        <img src={NodeLogo} alt="React" className="skill-icon" />
+                        <img src={MongoLogo} alt="React" className="skill-icon" />
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
                     <span className="project-link-disabled">
                     Visit <FaExternalLinkAlt />
                 </span>
@@ -93,6 +126,12 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">TodoList</h3>
                     <p className="project-progress">Progress: 100%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
                     <Link to="/todolist" className="project-link">
                         Visit <FaExternalLinkAlt />
                     </Link>
@@ -110,6 +149,12 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Calculator</h3>
                     <p className="project-progress">Progress: 100%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
                     <Link to="/calculator" className="project-link">
                         Visit <FaExternalLinkAlt />
                     </Link>
@@ -127,6 +172,12 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Recipe Finder</h3>
                     <p className="project-progress">Progress: 100%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
                     <Link to="/recipefinder" className="project-link">
                         Visit <FaExternalLinkAlt />
                     </Link>
@@ -144,6 +195,12 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Movie Find</h3>
                     <p className="project-progress">Progress: 100%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
                     <Link to="/moviefind" className="project-link">
                         Visit <FaExternalLinkAlt />
                     </Link>
@@ -161,6 +218,14 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Christian Anthony Photos</h3>
                     <p className="project-progress">Progress: 90%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                        <img src={PhotoshopLogo} alt="Photoshop" className="skill-icon" />
+                        <img src={IllustratorLogo} alt="Illustrator" className="skill-icon" />
+                    </div>
                     <a
                         href="http://christiananthony-photos.vercel.app/"
                         className="project-link"
@@ -183,6 +248,13 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Pro Footie Hub</h3>
                     <p className="project-progress">Progress: 50%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                        <img src={PhotoshopLogo} alt="Photoshop" className="skill-icon" />
+                    </div>
                     <a
                         href="http://pfh-seven.vercel.app/"
                         className="project-link"
@@ -205,6 +277,14 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Foot Flick</h3>
                     <p className="project-progress">Progress: 60%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                        <img src={PhotoshopLogo} alt="Photoshop" className="skill-icon" />
+                        <img src={IllustratorLogo} alt="Illustrator" className="skill-icon" />
+                    </div>
                     <a
                         href="http://footflick.vercel.app/"
                         className="project-link"
@@ -227,6 +307,13 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Service Page</h3>
                     <p className="project-progress">Progress: 100%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                        <img src={PhotoshopLogo} alt="Photoshop" className="skill-icon" />
+                    </div>
                     <a
                         href="https://servicepage-one.vercel.app/"
                         className="project-link"
@@ -255,6 +342,11 @@ function SideProjects() {
                 <div className="project-details">
                     <h3 className="project-title">Bombers FC site</h3>
                     <p className="project-progress">Progress: 40%</p>
+                    <div className="skill-icons">
+                        <img src={WordPressLogo} alt="Photoshop" className="skill-icon" />
+                        <img src={PhotoshopLogo} alt="Photoshop" className="skill-icon" />
+                        <img src={IllustratorLogo} alt="Illustrator" className="skill-icon" />
+                    </div>
                     <span className="project-link-disabled">
                     Visit <FaExternalLinkAlt />
                 </span>
