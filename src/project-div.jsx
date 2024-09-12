@@ -227,7 +227,7 @@ function SideProjects() {
                         <img src={IllustratorLogo} alt="Illustrator" className="skill-icon" />
                     </div>
                     <a
-                        href="http://christiananthony-photos.vercel.app/"
+                        href="http://caphotos.vercel.app/"
                         className="project-link"
                         target="_blank"
                         rel="noopener noreferrer"
