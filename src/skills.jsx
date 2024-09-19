@@ -16,6 +16,8 @@ import NodeLogo from '../src/assets/img/logo/nodejs.png';
 import ExpressLogo from '../src/assets/img/logo/expressjs.png';
 import MongoLogo from '../src/assets/img/logo/mongodb.png';
 import WordPressLogo from '../src/assets/img/logo/wordpress.png';
+import FigmaLogo from '../src/assets/img/logo/figma.png'
+import MysqlLogo from '../src/assets/img/logo/mysql.png';
 
 const topRowSkills = [
   { img: PHPLogo, name: 'PHP' },
@@ -23,18 +25,20 @@ const topRowSkills = [
   { img: JavascriptLogo, name: 'JavaScript' },
   { img: ReactLogo, name: 'React' },
   { img: GithubLogo, name: 'GitHub' },
-  { img: MongoLogo, name: 'MongoDB' },
+  { img: NodeLogo, name: 'Node JS' },
 ];
 
 const bottomRowSkills = [
+  { img: ExpressLogo, name: 'Express JS' },
+  { img: MongoLogo, name: 'MongoDB' },
+  { img: MysqlLogo, name: 'Mysql' },
   { img: HTMLLogo, name: 'HTML' },
   { img: CSSLogo, name: 'CSS' },
   { img: BootstrapLogo, name: 'Bootstrap' },
-  { img: NodeLogo, name: 'Node JS' },
-  { img: ExpressLogo, name: 'Express JS' },
+  { img: FigmaLogo, name: 'Figma' },
+  { img: WordPressLogo, name: 'Wordpress' },
   { img: PhotoshopLogo, name: 'Photoshop' },
   { img: IllustratorLogo, name: 'Illustrator' },
-  { img: WordPressLogo, name: 'Wordpress' },
 ];
 
 function Skills() {
