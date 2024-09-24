@@ -9,6 +9,7 @@ import AboutContent from '../../about-content.jsx';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../css/about.css';
+import FAQ from '../../faq.jsx';
 
 
 const AboutPage = () => {
@@ -60,6 +61,8 @@ const AboutPage = () => {
     </Fade>
 
     <AboutContent/>
+
+    <FAQ />
 
 
   </>
