@@ -1,8 +1,24 @@
 import React, { useState } from 'react';
+import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
 import './assets/css/faq.css';
 
 function FAQ() {
     const [activeIndex, setActiveIndex] = useState(null);
+
+    const { ref, inView } = useInView({
+        triggerOnce: false,  
+        threshold: 0.1,  
+    });
+    
+    const fadeInLeft = (index) => useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateX(0)' : 'translateX(-100px)',
+        config: { duration: 1100 },
+        delay: index * 200, 
+        reset: true,       
+    });
+    
 
     const questions = [
         {
@@ -36,7 +52,7 @@ function FAQ() {
     };
 
     return (
-        <div className="faq-main-container">
+        <animated.div  ref={ref} style={fadeInLeft(0)} className="faq-main-container">
             <h2>FAQ</h2>
             {questions.map((item, index) => (
                 <div key={index} className="faq-item">
@@ -48,7 +64,7 @@ function FAQ() {
                     )}
                 </div>
             ))}
-        </div>
+        </animated.div>
     );
 }
 
