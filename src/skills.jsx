@@ -18,9 +18,11 @@ import MongoLogo from '../src/assets/img/logo/mongodb.png';
 import WordPressLogo from '../src/assets/img/logo/wordpress.png';
 import FigmaLogo from '../src/assets/img/logo/figma.png'
 import MysqlLogo from '../src/assets/img/logo/mysql.png';
+import JavaLogo from "../src/assets/img/logo/java.png"
 
 const topRowSkills = [
   { img: PHPLogo, name: 'PHP' },
+  { img: JavaLogo, name: 'Java' },
   { img: jQueryLogo, name: 'jQuery' },
   { img: JavascriptLogo, name: 'JavaScript' },
   { img: ReactLogo, name: 'React' },
