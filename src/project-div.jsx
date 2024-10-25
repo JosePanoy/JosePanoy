@@ -14,6 +14,7 @@ import ShoeStorePic from './assets/img/shoestore.gif';
 import ServicePage from './assets/img/servicepage.gif';
 import PanoySocial from './assets/mp4/panoysocial.mp4'; 
 import BombersFCsite from './assets/mp4/wordpress site.mp4';
+import EMSsite from '../src/assets/mp4/ems.mp4'
 import { Link } from 'react-router-dom';
 
 
@@ -57,6 +58,9 @@ function SideProjects() {
     const fadeInFromBottom8 = fadeInFromBottom(1400);
     const fadeInFromBottom9 = fadeInFromBottom(1600);
     const fadeInFromBottom10 = fadeInFromBottom(1800);
+    const fadeInFromBottom11 = fadeInFromBottom(2000);
+    const fadeInFromBottom12 = fadeInFromBottom(2200);
+
 
     return (
         <animated.div ref={ref} className="project-container">
@@ -115,10 +119,43 @@ function SideProjects() {
                 </div>
             </animated.div>
 
+
+            <animated.div
+                className="project-item"
+                style={fadeInFromBottom3}
+                data-title="Panoy Social"
+            >
+                <video
+                    className="project-video"
+                    src={EMSsite}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+                <div className="project-details">
+                    <h3 className="project-title">Employee Management System Platform</h3>
+                    <p className="project-progress">Progress: 40%</p>
+                    <div className="skill-icons">
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={ExpressLogo} alt="React" className="skill-icon" />
+                        <img src={NodeLogo} alt="React" className="skill-icon" />
+                        <img src={MongoLogo} alt="React" className="skill-icon" />
+                        <img src={ReactLogo} alt="React" className="skill-icon" />
+                        <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
+                        <img src={HTMLLogo} alt="HTML" className="skill-icon" />
+                        <img src={CSSLogo} alt="CSS" className="skill-icon" />
+                    </div>
+                    <span className="project-link-disabled">
+                    Visit <FaExternalLinkAlt />
+                </span>
+                </div>
+            </animated.div>
+
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom3,
+                    ...fadeInFromBottom4,
                     backgroundImage: `url(${TodolistPic})`,
                 }}
                 data-title="TodoList"
@@ -141,7 +178,7 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom4,
+                    ...fadeInFromBottom5,
                     backgroundImage: `url(${CalculatorPic})`,
                 }}
                 data-title="Calculator"
@@ -164,7 +201,7 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom5,
+                    ...fadeInFromBottom6,
                     backgroundImage: `url(${RecipeFinder})`,
                 }}
                 data-title="Recipe Finder"
@@ -187,7 +224,7 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom6,
+                    ...fadeInFromBottom7,
                     backgroundImage: `url(${MovieFind})`,
                 }}
                 data-title="Movie Find"
@@ -210,14 +247,14 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom7,
+                    ...fadeInFromBottom8,
                     backgroundImage: `url(${CamPic})`,
                 }}
                 data-title="Christian Anthony Photos"
             >
                 <div className="project-details">
                     <h3 className="project-title">Christian Anthony Photos</h3>
-                    <p className="project-progress">Progress: 90%</p>
+                    <p className="project-progress">Progress: 95%</p>
                     <div className="skill-icons">
                         <img src={ReactLogo} alt="React" className="skill-icon" />
                         <img src={JavascriptLogo} alt="JavaScript" className="skill-icon" />
@@ -240,7 +277,7 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom8,
+                    ...fadeInFromBottom9,
                     backgroundImage: `url(${PFHPic})`,
                 }}
                 data-title="Pro Footie Hub"
@@ -269,7 +306,7 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom9,
+                    ...fadeInFromBottom10,
                     backgroundImage: `url(${ShoeStorePic})`,
                 }}
                 data-title="Foot Flick"
@@ -299,7 +336,7 @@ function SideProjects() {
             <animated.div
                 className="project-item"
                 style={{
-                    ...fadeInFromBottom9,
+                    ...fadeInFromBottom11,
                     backgroundImage: `url(${ServicePage})`,
                 }}
                 data-title="Service Page"
@@ -328,7 +365,7 @@ function SideProjects() {
 
             <animated.div
                 className="project-item"
-                style={fadeInFromBottom10}
+                style={fadeInFromBottom12}
                 data-title="Bombers FC site"
             >
                 <video
