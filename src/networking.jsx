@@ -4,7 +4,6 @@ import badge4 from "../src/assets/img/cisco/1.png";
 import badge1 from "../src/assets/img/cisco/2.png";
 import badge3 from "../src/assets/img/cisco/3.png";
 import badge2 from "../src/assets/img/cisco/4.png";
-
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 
@@ -41,6 +40,12 @@ function Networking() {
         config: { duration: 1000 },
         delay: 900,
     });
+    const fadeInFromBottom5 = useSpring({
+        opacity: inView ? 1 : 0,
+        transform: inView ? 'translateY(0)' : 'translateY(100px)',
+        config: { duration: 1200 },
+        delay: 900,
+    });
 
     return (
         <>
@@ -59,6 +64,14 @@ function Networking() {
                     <img src={badge4} alt="Badge 4" className="networking-badge" />
                 </animated.div>
             </div>
+            <animated.h4 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', marginTop: '30px', ...fadeInFromBottom5 }}>
+                <a href="https://www.credly.com/users/jan-rasheed-calderon-calderon" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   className="networking-link">
+                    See more of my skills wallet....
+                </a>
+            </animated.h4>
         </>
     );
 }
