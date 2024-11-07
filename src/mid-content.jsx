@@ -44,7 +44,12 @@ function MidContent() {
                         className="grid-item"
                     >
                         {item.isVideo ? (
-                            <video src={item.src} controls />
+                            <video 
+                                src={item.src} 
+                                autoPlay 
+                                loop 
+                                muted 
+                            />
                         ) : (
                             <img src={item.src} alt="" />
                         )}
